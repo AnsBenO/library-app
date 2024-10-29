@@ -1,0 +1,21 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd" version="3.0">
+
+      <persistence-unit name="demo" transaction-type="JTA">
+            <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+            <jta-data-source>jdbc/lib</jta-data-source>
+
+            <class>com.ansbeno.models.Book</class>
+            <class>com.ansbeno.Category</class>
+
+            <properties>
+                  <property name="hibernate.transaction.jta.platform" value="org.hibernate.engine.transaction.jta.platform.internal.SunOneJtaPlatform"/>
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+                  <property name="hibernate.show_sql" value="true"/>
+                  <property name="hibernate.format_sql" value="true"/>
+                  <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+
+            </properties>
+      </persistence-unit>
+</persistence>
