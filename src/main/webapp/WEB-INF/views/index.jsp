@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 
 <head>
     <title>Library Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="<c:url value='/css/output.css' />">
 </head>
 
 <body class="bg-gray-50">

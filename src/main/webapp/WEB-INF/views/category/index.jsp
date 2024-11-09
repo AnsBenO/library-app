@@ -5,7 +5,8 @@
 
 <head>
     <title>Category List</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="<c:url value='/css/output.css' />">
+
 </head>
 
 <body class="bg-gray-50">

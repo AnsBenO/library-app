@@ -119,7 +119,7 @@
             <webApp>
               <contextPath>/${project.build.finalName}</contextPath>
             </webApp>
-            <scan>20</scan>
+            <scan>2</scan>
             <stopKey>CTRL+C</stopKey>
             <stopPort>8999</stopPort>
           </configuration>
