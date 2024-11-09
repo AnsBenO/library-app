@@ -7,11 +7,7 @@
         metadata-complete = "false">
   <display-name> Libary </display-name>
   <description> Library Application</description>
-  <!-- <listener>
-    <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
-  </listener> -->
 
-  <!-- web.xml -->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
@@ -21,5 +17,21 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>/WEB-INF/applicationContext.xml</param-value>
   </context-param>
+
+  <servlet>
+    <!-- Provide a Servlet Name -->
+    <servlet-name>frontcontroller-dispatcher</servlet-name>
+    <!-- Provide a fully qualified path to the DispatcherServelt class -->
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <!-- Provide a Servlet Name that you want to map -->
+    <servlet-name>frontcontroller-dispatcher</servlet-name>
+    <!-- Provide a url pattern -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
 
 </web-app>
