@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:context="http://www.springframework.org/schema/context"
+      xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+      <!-- Enable component scanning for annotated components (e.g., @Service, @Repository) -->
+      <context:component-scan base-package="com.ansbeno" />
+
+      <!-- DataSource configuration for database connection -->
+      <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+            <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+            <property name="url" value="jdbc:mysql://localhost:3306/yourdatabase" />
+            <property name="username" value="yourusername" />
+            <property name="password" value="yourpassword" />
+      </bean> -->
+
+      <!-- Configure a transaction manager (usually required for @Transactional) -->
+      <!-- <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+            <property name="dataSource" ref="dataSource" />
+      </bean> -->
+
+      <!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+
+      <!-- Define other beans here (e.g., service beans, DAO beans) -->
+      <!-- <bean id="myService" class="com.example.yourpackage.MyService" />
+      <bean id="myRepository" class="com.example.yourpackage.MyRepository" /> -->
+
+</beans>

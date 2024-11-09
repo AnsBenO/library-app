@@ -1,19 +1,21 @@
 package com.ansbeno.repositories;
 
+import java.io.Serializable;
 import java.util.List;
+
+import org.springframework.stereotype.Component;
 
 import com.ansbeno.entities.Book;
 
-import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
-
-import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
+import lombok.RequiredArgsConstructor;
 
-@ApplicationScoped
-public class BookRepository {
-      @PersistenceContext(unitName = "demo")
-      private EntityManager entityManager;
+@RequiredArgsConstructor
+@Component
+public class BookRepository implements Serializable {
+
+      private final transient EntityManager entityManager;
 
       public List<Book> getBooksByCategory(String category) {
             String queryString = "SELECT b FROM Book b";
